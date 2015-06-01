@@ -1,0 +1,22 @@
+\chapter*{Week 1 Lecture Notes}
+\section{Obtaining Data}
+
+\section{Raw and Processed Data}
+
+\section{Components of Tidy Data}
+
+\section{Reading Excel Files}
+Excel files are still the most widely used format for sharing data. But we need to be able to extract this data.
+
+We load the \code{xlsx} package. (Not the only library for this functionality.) Use \code{read.xlsx} to read the file.
+
+The \code{write.xlsx} fuction will write to an Excel file. \code{read.xlsx2} is much faster than \code{read.xlsx} but may be unstable when reading subsets of rows. The XLConnect package has more options for writing and manipulating Excel files. In general though, it's better to store data in a database or in a comma separated (*.csv) or tab separated (*.tab / *.txt) as it's just easier to distribute these formats.
+
+\section{Reading XML Files}
+
+\section{Using \code{data.table}}
+
+\code{data.table} inherits from \code{data.frame}. All functions that accept \code{data.frame} also work on \code{data.table}. It's written in C so it is very fast: much much faster at subsetting, group, and updating. Data tables are created just like data frames, after loading the \code{data.table} library.
+
+\subsection{Column subsetting in \code{data.table}}
+The subsetting function is modified for \code{data.table}: the argument you pass after the comma is called an ``expression.'' In R an expression is a collection of statements enclosed in curly braces.
